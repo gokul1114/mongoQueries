@@ -1,0 +1,630 @@
+
+//Creating new db
+use zen_class
+
+//Insert Query
+
+db.users.insertMany([
+  {
+    name: "user1",
+    attendance: "90%",
+    taskCompleted: [
+      "task1",
+      "task2",
+      "task5"
+    ],
+    codeKataSolved: [
+      "problem1",
+      "problem2"
+    ],
+    codeKataCount: 2,
+    isStudent: true,
+    
+  },
+  {
+    name: "user2",
+    attendance: "80%",
+    taskCompleted: [
+      "task1",
+      "task2"
+    ],
+    codeKataSolved: [
+      "problem1",
+      "problem3"
+    ],
+    codeKataCount: 2,
+    isStudent: true,
+    
+  },
+  {
+    name: "user3",
+    attendance: "80%",
+    menteeCount: 5,
+    isStudent: false
+  },
+  {
+    name: "user4",
+    attendance: "97%",
+    menteeCount: 16,
+    isStudent: false
+  }
+])
+
+db.topics.insertMany([
+  {
+    date: new Date("2020-10-10"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-11"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic2",
+    task: {
+      taskName: "task2",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-12"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic3",
+    task: {
+      taskName: "task3",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-13"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic4",
+    task: {
+      taskName: "task4",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-14"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic5",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-15"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-16"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-17"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-18"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-19"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-20"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-21"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-22"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-23"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-24"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-25"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-26"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-27"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-28"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-29"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  },
+  {
+    date: new Date("2020-10-30"),
+    absent: [
+      "user1"
+    ],
+    present: [
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    topic: "topic1",
+    task: {
+      taskName: "task1",
+      completed: [
+        "user1",
+        "user2"
+      ],
+      incomplete: [
+        "user3"
+      ]
+    }
+  }
+])
+
+campus drive
+
+db.campusDrive.insertMany([
+  {
+    driveName: "company1",
+    date: new Date("2020-10-05"),
+    studentAppeared: [
+      "user1",
+      "user2",
+      "user3",
+      "user4"
+    ],
+    studentHired: [
+      "user1",
+      "user2"
+    ]
+  },
+  {
+    driveName: "company2",
+    date: new Date("2020-10-17"),
+    studentAppeared: [
+      "user1",
+      "user2",
+      "user3",
+      "user4"
+    ],
+    studentHired: [
+      "user3"
+    ]
+  }
+]
+
+
+Solution Queries
+
+1
+db.topics.find({
+  date: {
+    $gt: ISODate("2020-10-01"),
+    $lte: ISODate("2020-10-30")
+  }
+},
+{
+  "date": true,
+  "task.taskName": true
+})
+
+2
+db.campusDrive.find({
+  date: {
+    $gte: ISODate("2020-10-15"),
+    $lt: ISODate("2020-10-30")
+  }
+},
+{
+  driveName: 1
+})
+
+3 
+db.campusDrive.find({},
+{
+  driveName: 1,
+  studentAppeared: 1
+})
+
+4
+db.users.find({
+  isStudent: true
+},
+{
+  codeKataCount: 1
+})
+
+5
+db.users.find({
+  isStudent: false
+},
+{
+  name: 1,
+  menteeCount: 1
+})
+6
+db.topics.find({
+  date: {
+    $gt: ISODate("2020-10-15"),
+    $lte: ISODate("2020-10-30")
+  }
+},
+{
+  "task.incomplete": true,
+  absent: true
+})
